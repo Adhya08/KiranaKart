@@ -21,3 +21,4 @@
 - OWASP Top 10:2021 (A01 to A10)
 - CWE Top 25 (2025/2026 Edition)
 - India Digital Personal Data Protection Act (DPDP Act, 2023) Sections 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16.
+

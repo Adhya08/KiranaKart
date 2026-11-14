@@ -14,3 +14,4 @@ router.get('/:id', authenticate, orderController.getOrderDetails);
 router.get('/:id/invoice', authenticate, orderController.downloadInvoice);
 
 module.exports = router;
+

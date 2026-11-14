@@ -84,3 +84,4 @@ def run_score(scan_results_path=None):
 if __name__ == '__main__':
     scan_file = sys.argv[1] if len(sys.argv) > 1 else None
     sys.exit(run_score(scan_file))
+

@@ -15,3 +15,4 @@ Section 8(10) of the DPDP Act mandates that every Data Fiduciary establish an ea
 4. **Acknowledgement:** Automated SMS/email sent immediately with tracking link.
 5. **SLA Window:** 72 business hours for formal investigation and written decision.
 6. **Escalation Path:** If the user is dissatisfied or 72 hours elapse without resolution, the screen renders an escalation button linking directly to the Data Protection Board of India complaint portal.
+

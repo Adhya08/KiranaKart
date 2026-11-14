@@ -18,3 +18,4 @@ router.post('/verify-parental-consent', authController.verifyParentConsent);
 router.get('/me', authenticate, authController.getCurrentUser);
 
 module.exports = router;
+

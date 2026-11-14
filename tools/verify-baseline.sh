@@ -41,3 +41,4 @@ python3 tools/score.py || python tools/score.py
 echo "=========================================================="
 echo "  BASELINE VERIFICATION PASSED (ZERO FINDINGS TARGET MET)"
 echo "=========================================================="
+

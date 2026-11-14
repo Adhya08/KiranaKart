@@ -11,3 +11,4 @@ function computeCatalogCacheKey(storeId, category, page) {
 }
 
 module.exports = { computeCatalogCacheKey };
+

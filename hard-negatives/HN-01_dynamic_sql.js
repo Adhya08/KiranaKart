@@ -19,3 +19,4 @@ function buildSafeProductQuery(sortBy, filterCategory, minPrice) {
 }
 
 module.exports = { buildSafeProductQuery };
+

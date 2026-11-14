@@ -102,3 +102,4 @@ module.exports = {
   updateProductInventory,
   bulkImport
 };
+

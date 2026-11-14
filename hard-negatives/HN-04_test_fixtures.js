@@ -10,3 +10,4 @@ const TEST_MOCK_PAYMENT_FIXTURE = Object.freeze({
 });
 
 module.exports = { TEST_MOCK_PAYMENT_FIXTURE };
+

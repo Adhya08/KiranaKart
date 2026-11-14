@@ -11,3 +11,4 @@ function handlePublicHealthCheck(req, res) {
 }
 
 module.exports = { handlePublicHealthCheck };
+

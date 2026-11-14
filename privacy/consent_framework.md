@@ -28,3 +28,4 @@ The consent architecture of KiranaKart adheres strictly to the core tenants of S
 5. **Withdrawal Parity:**
    - Users can toggle consent off with a single click in their Privacy Center.
    - Downstream notification workers immediately cease promotional dispatch upon receipt of the withdrawal event.
+

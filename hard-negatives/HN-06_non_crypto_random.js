@@ -10,3 +10,4 @@ function calculateUiCardStaggerDelay(itemIndex) {
 }
 
 module.exports = { calculateUiCardStaggerDelay };
+

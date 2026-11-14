@@ -35,3 +35,4 @@ Under Chapter III (Sections 11 to 14) of the DPDP Act, you possess the following
 - **Email:** `dpo@kiranakart.local`
 - **Address:** 4th Floor, Cyber Park, Sector 62, Noida, Uttar Pradesh 201309, India
 - **Escalation to Data Protection Board of India:** If your grievance remains unresolved after 72 hours, you have the statutory right to file a complaint with the Data Protection Board of India at [https://dpbi.gov.in](https://dpbi.gov.in).
+

@@ -17,3 +17,4 @@ class EncryptedPrincipalProfile {
 }
 
 module.exports = { EncryptedPrincipalProfile };
+

@@ -34,3 +34,4 @@ router.put('/', authenticate, validateProfileUpdate, (req, res) => {
 });
 
 module.exports = router;
+

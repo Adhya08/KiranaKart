@@ -24,3 +24,4 @@ router.post('/grievances', authenticate, privacyController.submitGrievance);
 router.get('/grievances', authenticate, privacyController.listUserGrievances);
 
 module.exports = router;
+

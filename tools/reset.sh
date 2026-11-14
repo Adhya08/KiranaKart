@@ -22,3 +22,4 @@ if [ -f "kiranakart.db" ]; then
 fi
 
 echo "Repository and database reset to clean baseline."
+

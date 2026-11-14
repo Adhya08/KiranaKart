@@ -1041,3 +1041,4 @@ function escape(str) {
 
 // Kickoff
 window.addEventListener('DOMContentLoaded', init);
+

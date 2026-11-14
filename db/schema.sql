@@ -223,3 +223,4 @@ CREATE INDEX IF NOT EXISTS idx_orders_user ON orders(user_id);
 CREATE INDEX IF NOT EXISTS idx_orders_store ON orders(store_id);
 CREATE INDEX IF NOT EXISTS idx_consent_user ON consent_ledger(user_id);
 CREATE INDEX IF NOT EXISTS idx_audit_correlation ON audit_logs(correlation_id);
+

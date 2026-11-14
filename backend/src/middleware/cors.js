@@ -24,3 +24,4 @@ const corsOptions = {
 };
 
 module.exports = cors(corsOptions);
+

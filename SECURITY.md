@@ -23,3 +23,4 @@ If you discover an unexpected security vulnerability or unintended compliance re
 2. Submit a report directly to the Security Team at `security@kiranakart.local` or to the Data Protection Officer at `dpo@kiranakart.local`.
 3. Include the affected file, CWE/DPDP classification, and reproduction steps.
 4. We aim to acknowledge receipt within 24 hours and address verified defects in accordance with our 72-hour turnaround commitment.
+

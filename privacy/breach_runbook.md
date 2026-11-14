@@ -45,3 +45,4 @@ What Data Was NOT Involved: Your passwords remain hashed with Argon2id and payme
 What We Have Done: We immediately contained the incident, applied security patches, and notified the Data Protection Board of India.
 What You Should Do: Monitor your account for suspicious activity and feel free to reach our Grievance Officer at dpo@kiranakart.local.
 ```
+

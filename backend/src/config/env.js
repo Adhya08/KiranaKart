@@ -34,3 +34,4 @@ module.exports = {
   // Security Flags
   DEBUG_MODE: false // Hardened: debug always disabled by default (C-A05-03)
 };
+

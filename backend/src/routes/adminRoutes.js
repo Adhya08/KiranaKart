@@ -18,3 +18,4 @@ router.post('/purge-expired-data', adminController.triggerRetentionPurge);
 router.get('/compliance-overview', adminController.getComplianceOverview);
 
 module.exports = router;
+

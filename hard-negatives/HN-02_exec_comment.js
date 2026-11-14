@@ -22,3 +22,4 @@ function calculateDiscountExecutionPipeline(items, couponCode) {
 }
 
 module.exports = { calculateDiscountExecutionPipeline };
+

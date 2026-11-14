@@ -16,3 +16,4 @@ router.put('/products/:productId/inventory', storeController.updateProductInvent
 router.post('/bulk-import', storeController.bulkImport);
 
 module.exports = router;
+

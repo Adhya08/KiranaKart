@@ -12,3 +12,4 @@ storage_uploads_safe/*
 *.db-shm
 .DS_Store
 Thumbs.db
+

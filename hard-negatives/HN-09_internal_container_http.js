@@ -9,3 +9,4 @@ function isInternalHealthcheckTarget(targetUrl) {
 }
 
 module.exports = { isInternalHealthcheckTarget, INTERNAL_DOCKER_HEALTHCHECK_URL };
+

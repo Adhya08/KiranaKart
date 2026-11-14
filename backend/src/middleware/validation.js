@@ -117,3 +117,4 @@ module.exports = {
   SAFE_EMAIL_REGEX,
   SAFE_PHONE_REGEX
 };
+

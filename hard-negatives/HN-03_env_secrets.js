@@ -16,3 +16,4 @@ function getSecurityConfiguration() {
 }
 
 module.exports = { getSecurityConfiguration };
+

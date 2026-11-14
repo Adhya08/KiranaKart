@@ -169,3 +169,4 @@ module.exports = {
   verifyJwt,
   revokeToken
 };
+

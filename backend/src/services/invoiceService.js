@@ -114,3 +114,4 @@ function escapeHtml(str) {
 }
 
 module.exports = { generateInvoiceData };
+

@@ -257,3 +257,4 @@ module.exports = {
   getSignificantDataFiduciaryStatus,
   consentManagerHook
 };
+

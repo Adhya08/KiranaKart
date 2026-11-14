@@ -17,3 +17,4 @@ function renderSafeProductDescription(rawDescription) {
 }
 
 module.exports = { renderSafeProductDescription };
+

@@ -22,3 +22,4 @@ See `privacy/retention_schedule.json` for granular retention thresholds. Data is
 - Officer: Smt. Priyanka Sharma, DPO & Grievance Redressal Officer
 - Response SLA: Formal resolution within 72 hours of ticket generation
 - Escalation: Data Protection Board of India (DPBI)
+

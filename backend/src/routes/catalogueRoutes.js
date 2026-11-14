@@ -13,3 +13,4 @@ router.get('/products/:id', catalogueController.getProductDetails);
 router.post('/products/:id/reviews', authenticate, catalogueController.addReview);
 
 module.exports = router;
+

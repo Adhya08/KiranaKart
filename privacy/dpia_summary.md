@@ -32,3 +32,4 @@ KiranaKart processes customer profiles, geolocation, and payment transactions ac
    *Mitigation:* Processor register with strict DPA clauses and field minimisation (only tokenized IDs passed).
 3. **Risk:** Residual personal data remaining after erasure requests.  
    *Mitigation:* Synchronous cryptographic shredding and database cascade purge with verified audit log.
+
