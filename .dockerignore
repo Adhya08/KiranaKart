@@ -1,0 +1,14 @@
+.git
+.github
+node_modules
+npm-debug.log
+storage_uploads_safe/*
+!storage_uploads_safe/.gitkeep
+.env
+.env.*
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.DS_Store
+Thumbs.db

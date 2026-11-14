@@ -1,0 +1,37 @@
+{
+  "name": "kiranakart-secure",
+  "version": "1.0.0",
+  "description": "Hardened, DPDP-compliant reference application serving as the negative control benchmark for SecureScan",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node backend/src/server.js",
+    "test": "node test/run-tests.js",
+    "score": "python tools/score.py",
+    "inject": "node tools/inject.js",
+    "verify:baseline": "bash tools/verify-baseline.sh"
+  },
+  "keywords": [
+    "kiranakart",
+    "securescan",
+    "negative-control",
+    "owasp-top-10",
+    "dpdp-act-2023",
+    "hardened-app"
+  ],
+  "author": "KiranaKart Engineering",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "fast-xml-parser": "^5.4.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2",
+    "sanitize-html": "^2.17.1",
+    "uuid": "^13.0.0"
+  }
+}

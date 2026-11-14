@@ -1,0 +1,55 @@
+version: '3.8'
+
+# Hardened Compose Specification
+# Controls: C-A05-04 (non-root, least privilege), C-X-08 (segmented networks, no exposed db ports)
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - SIGNIFICANT_DATA_FIDUCIARY=true
+    networks:
+      - frontend_net
+      - internal_backend_net
+    security_opt:
+      - no-new-privileges:true
+    read_only: false
+    tmpfs:
+      - /tmp
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:4000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # Internal storage / database container (C-X-08: no public ports mapped)
+  postgres_internal:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kiranakart
+      POSTGRES_USER: kiranakart_svc
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    networks:
+      - internal_backend_net
+    # Port 5432 is strictly unmapped to host (C-X-08 defense)
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+networks:
+  frontend_net:
+    driver: bridge
+  internal_backend_net:
+    internal: true # Isolated internal network with no external internet ingress
+
+volumes:
+  db_data:

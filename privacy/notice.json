@@ -1,0 +1,87 @@
+{
+  "version": "2026.1",
+  "effective_date": "2026-11-14",
+  "fiduciary_name": "KiranaKart Technologies Private Limited",
+  "dpo_contact": {
+    "name": "Smt. Priyanka Sharma",
+    "designation": "Data Protection Officer & Grievance Officer",
+    "email": "dpo@kiranakart.local",
+    "address": "Floor 4, Cyber Park, Sector 62, Noida, Uttar Pradesh, 201309, India",
+    "sla_hours": 72
+  },
+  "board_complaint_url": "https://dpbi.gov.in/file-complaint",
+  "languages": {
+    "en": {
+      "title": "Privacy Notice under DPDP Act, 2023",
+      "summary": "KiranaKart values your privacy. We process personal data solely to fulfill grocery orders, deliver updates, and provide support.",
+      "purposes": [
+        { "id": "essential", "label": "Order Processing & Delivery", "description": "Processing your shopping cart, order fulfillment, delivery address, and payments.", "required": true },
+        { "id": "order_updates", "label": "SMS & WhatsApp Updates", "description": "Order dispatch notifications, rider location updates, and delivery confirmation.", "required": false },
+        { "id": "marketing", "label": "Promotional Offers & Recommendations", "description": "Curated grocery discounts, seasonal coupons, and promotional updates.", "required": false },
+        { "id": "analytics", "label": "App Performance & Usage Telemetry", "description": "Anonymous metrics to fix application crashes and optimize checkout speeds.", "required": false }
+      ],
+      "rights_info": "You have the right to access your data, request correction, withdraw consent, designate a nominee, or request erasure at any time in your Privacy Center.",
+      "grievance_info": "To file a grievance, submit a ticket in our app or email dpo@kiranakart.local. If unresolved within 72 hours, you may escalate to the Data Protection Board of India."
+    },
+    "hi": {
+      "title": "डीपीडीपी अधिनियम, 2023 के तहत गोपनीयता सूचना",
+      "summary": "किरानाकार्ट आपकी गोपनीयता का सम्मान करता है। हम केवल किराने का ऑर्डर पूरा करने, सूचनाएं भेजने और सहायता के लिए डेटा प्रोसेस करते हैं।",
+      "purposes": [
+        { "id": "essential", "label": "ऑर्डर प्रोसेसिंग और डिलीवरी", "description": "शॉपिंग कार्ट, डिलीवरी पता और भुगतान पूरा करने के लिए आवश्यक।", "required": true },
+        { "id": "order_updates", "label": "एसएमएस और व्हाट्सएप अपडेट", "description": "डिलीवरी स्थिति और राइडर सूचनाएं।", "required": false },
+        { "id": "marketing", "label": "प्रमोशनल ऑफ़र और सुझाव", "description": "किराना छूट, मौसमी कूपन और नए उत्पाद की जानकारी।", "required": false },
+        { "id": "analytics", "label": "ऐप प्रदर्शन एनालिटिक्स", "description": "ऐप को बेहतर और क्रैश-फ्री बनाने के लिए अज्ञात आंकड़े।", "required": false }
+      ],
+      "rights_info": "आप अपनी प्रोफ़ाइल से डेटा डाउनलोड, सुधार, सहमति वापसी, नामांकित व्यक्ति का चयन या डेटा मिटाने का अनुरोध कर सकते हैं।",
+      "grievance_info": "शिकायत के लिए ऐप में टिकट दर्ज करें या dpo@kiranakart.local पर संपर्क करें। 72 घंटे में समाधान न होने पर आप भारतीय डेटा संरक्षण बोर्ड में अपील कर सकते हैं।"
+    },
+    "kn": {
+      "title": "ಡಿಪಿಡಿಪಿ ಕಾಯ್ದೆ, 2023 ರ ಅಡಿಯಲ್ಲಿ ಗೌಪ್ಯತಾ ಸೂಚನೆ",
+      "summary": "ಕಿರಾಣಾಕಾರ್ಟ್ ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ಗೌರವಿಸುತ್ತದೆ. ದಿನಸಿ ಆರ್ಡರ್ ಪೂರ್ಣಗೊಳಿಸಲು ಮಾತ್ರ ನಾವು ವೈಯಕ್ತಿಕ ಡೇಟಾವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತೇವೆ.",
+      "purposes": [
+        { "id": "essential", "label": "ಆರ್ಡರ್ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಡೆಲಿವರಿ", "description": "ಖರೀದಿ ಮತ್ತು ವಿತರಣೆಗೆ ಅಗತ್ಯವಾಗಿದೆ.", "required": true },
+        { "id": "order_updates", "label": "ಆರ್ಡರ್ ಅಪ್‌ಡೇಟ್‌ಗಳು", "description": "ಎಸ್ಸೆಮ್ಮೆಸ್ ಮತ್ತು ವಾಟ್ಸಾಪ್ ಅಧಿಸೂಚನೆಗಳು.", "required": false },
+        { "id": "marketing", "label": "ಪ್ರಚಾರ ಕೊಡುಗೆಗಳು", "description": "ರಿಯಾಯಿತಿ ಮತ್ತು ಕೊಡುಗೆ ಮಾಹಿತಿ.", "required": false },
+        { "id": "analytics", "label": "ಆ್ಯಪ್ ವಿಶ್ಲೇಷಣೆ", "description": "ಆ್ಯಪ್ ಸುಧಾರಣೆಗಾಗಿ ವಿಶ್ಲೇಷಣೆ.", "required": false }
+      ],
+      "rights_info": "ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಪ್ರವೇಶಿಸಲು, ತಿದ್ದುಪಡಿ ಮಾಡಲು ಅಥವಾ ಅಳಿಸಲು ಗೌಪ್ಯತಾ ಕೇಂದ್ರದಲ್ಲಿ ಅವಕಾಶವಿದೆ.",
+      "grievance_info": "ದೂರುಗಳಿಗೆ dpo@kiranakart.local ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಭಾರತೀಯ ಡೇಟಾ ಸಂರಕ್ಷಣಾ ಮಂಡಳಿಗೆ ಮೇಲ್ಮನವಿ ಸಲ್ಲಿಸಿ."
+    },
+    "ta": {
+      "title": "DPDP சட்டம், 2023 இன் கீழ் தனியுரிமை அறிவிப்பு",
+      "summary": "கிரானாகார்ட் உங்கள் தனியுரிமையை மதிக்கிறது. மளிகை ஆர்டர்களை நிறைவேற்ற மட்டுமே தனிப்பட்ட தரவு செயலாக்கப்படுகிறது.",
+      "purposes": [
+        { "id": "essential", "label": "ஆர்டர் செயலாக்கம் மற்றும் விநியோகம்", "description": "டெலிவரி மற்றும் கட்டணங்களுக்கு அத்தியாவசியமானது.", "required": true },
+        { "id": "order_updates", "label": "ஆர்டர் புதுப்பிப்புகள்", "description": "எஸ்எம்எஸ் மற்றும் வாட்ஸ்அப் அறிவிப்புகள்.", "required": false },
+        { "id": "marketing", "label": "விளம்பரச் சலுகைகள்", "description": "தள்ளுபடிகள் மற்றும் புதிய சலுகைகள்.", "required": false },
+        { "id": "analytics", "label": "பயன்பாட்டு பகுப்பாய்வு", "description": "செயலியை மேம்படுத்துவதற்கான பகுப்பாய்வு.", "required": false }
+      ],
+      "rights_info": "உங்கள் தரவை அணுக, திருத்த அல்லது அழிக்க தனியுரிமை மையத்தைப் பயன்படுத்தவும்.",
+      "grievance_info": "புகார்களுக்கு dpo@kiranakart.local அல்லது இந்திய தரவு பாதுகாப்பு வாரியத்தை அணுகவும்."
+    },
+    "te": {
+      "title": "DPDP చట్టం, 2023 కింద గోప్యతా నోటీసు",
+      "summary": "కిరాణాకార్ట్ మీ గోప్యతను గౌరవిస్తుంది. కిరాణా ఆర్డర్ల పూర్తి కోసమే వ్యక్తిగత డేటా ప్రాసెస్ చేయబడుతుంది.",
+      "purposes": [
+        { "id": "essential", "label": "ఆర్డర్ ప్రాసెసింగ్ మరియు డెలివరీ", "description": "డెలివరీ మరియు చెల్లింపులకు అవసరం.", "required": true },
+        { "id": "order_updates", "label": "ఆర్డర్ అప్‌డేట్‌లు", "description": "ఎస్ఎంఎస్ మరియు వాట్సాప్ నోటిఫికేషన్‌లు.", "required": false },
+        { "id": "marketing", "label": "ప్రచార ఆఫర్లు", "description": "రాయితీలు మరియు కస్టమ్ ఆఫర్లు.", "required": false },
+        { "id": "analytics", "label": "యాప్ విశ్లేషణలు", "description": "యాప్ అనుభవాన్ని మెరుగుపరచడానికి డేటా.", "required": false }
+      ],
+      "rights_info": "మీరు ఎప్పుడైనా మీ డేటాను డౌన్‌లోడ్ చేసుకోవచ్చు లేదా తీసివేయమని కోరవచ్చు.",
+      "grievance_info": "ఫిర్యాదుల పరిష్కారానికి dpo@kiranakart.local లేదా భారత డేటా ప్రొటెక్షన్ బోర్డును సంప్రదించండి."
+    },
+    "bn": {
+      "title": "ডিপিডিপি আইন, ২০২৩ এর অধীনে গোপনীয়তা বিজ্ঞপ্তি",
+      "summary": "কিরানাকার্ট আপনার গোপনীয়তাকে সম্মান করে। মুদি সামগ্রী অর্ডার পূরণ এবং পরিষেবার জন্যই কেবল ডেটা ব্যবহৃত হয়।",
+      "purposes": [
+        { "id": "essential", "label": "অর্ডার প্রক্রিয়াকরণ ও ডেলিভারি", "description": "অর্ডার পৌঁছানো এবং অর্থপ্রদানের জন্য আবশ্যক।", "required": true },
+        { "id": "order_updates", "label": "অর্ডার আপডেট", "description": "এসএমএস এবং হোয়াটসঅ্যাপ নোটিফিকেশন।", "required": false },
+        { "id": "marketing", "label": "প্রচারমূলক অফার", "description": "মুদি পণ্যের বিশেষ ছাড় এবং কুপন।", "required": false },
+        { "id": "analytics", "label": "অ্যাপ অ্যানালিটিক্স", "description": "অ্যাপ্লিকেশন দ্রুত ও উন্নত করার তথ্য।", "required": false }
+      ],
+      "rights_info": "আপনি ডেটা সংশোধন, প্রত্যাহার, বা মুছে ফেলার অধিকার রাখেন।",
+      "grievance_info": "অভিযোগের জন্য dpo@kiranakart.local বা ভারতীয় ডেটা সুরক্ষা বোর্ডে যোগাযোগ করুন।"
+    }
+  }
+}

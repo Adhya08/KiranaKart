@@ -1,0 +1,252 @@
+[
+  {
+    "id": "DC-01",
+    "fixes": "D-01",
+    "act_section": "S5",
+    "rule_reference": "Rule 3(1)",
+    "title": "Clear, standalone privacy notice before or at collection",
+    "description": "Unbundled, itemized notice detailing personal data categories, specific purposes, rights exercise, and Data Protection Board of India complaint procedure.",
+    "evidence_type": "UI, document",
+    "verification": "privacy/notice.md and GET /api/privacy/notice verification test"
+  },
+  {
+    "id": "DC-02",
+    "fixes": "D-02",
+    "act_section": "S6",
+    "rule_reference": "Rule 4(1)",
+    "title": "Unticked, granular, separate consent choices",
+    "description": "Explicit separate checkboxes for essential, order updates, marketing, and analytics; no pre-ticked boxes or forced bundling with Terms of Service.",
+    "evidence_type": "UI, code",
+    "verification": "frontend/src/components/ConsentBanner.js and POST /api/privacy/consent tests"
+  },
+  {
+    "id": "DC-03",
+    "fixes": "D-03",
+    "act_section": "S6",
+    "rule_reference": "Rule 4(3)",
+    "title": "Non-conditional service access",
+    "description": "App remains fully functional for ordering groceries even when optional marketing and analytics consents are declined.",
+    "evidence_type": "code, test",
+    "verification": "backend/src/middleware/dpdpMiddleware.js and order checkout without marketing consent"
+  },
+  {
+    "id": "DC-04",
+    "fixes": "D-04",
+    "act_section": "S6",
+    "rule_reference": "Rule 4(5)",
+    "title": "Auditable, tamper-evident consent ledger",
+    "description": "Stores user ID, granular purpose, notice version, timestamp, channel, and IP hash with append-only audit trail.",
+    "evidence_type": "data, code",
+    "verification": "backend/src/services/dpdpService.js consent_ledger queries"
+  },
+  {
+    "id": "DC-05",
+    "fixes": "D-05",
+    "act_section": "S6(4)",
+    "rule_reference": "Rule 4(6)",
+    "title": "Frictionless consent withdrawal",
+    "description": "Profile settings provide one-click toggle to revoke consent, taking immediate effect and halting downstream processing.",
+    "evidence_type": "UI, code",
+    "verification": "POST /api/privacy/consent/withdraw tests"
+  },
+  {
+    "id": "DC-06",
+    "fixes": "D-06",
+    "act_section": "S5, S6",
+    "rule_reference": "Rule 3(3)",
+    "title": "Multi-language notice & consent (Eighth Schedule languages)",
+    "description": "Notice and consent available in English, Hindi (हिन्दी), Kannada (ಕನ್ನಡ), Tamil (தமிழ்), Telugu (తెలుగు), and Bengali (বাংলা).",
+    "evidence_type": "document, UI",
+    "verification": "privacy/notice.json and language switcher test"
+  },
+  {
+    "id": "DC-07",
+    "fixes": "D-07",
+    "act_section": "S4",
+    "rule_reference": "Rule 3(2)",
+    "title": "Purpose limitation and purpose tagging on data fields",
+    "description": "Personal data fields tagged with allowed purposes; runtime check prevents using personal data for non-consented purposes.",
+    "evidence_type": "code",
+    "verification": "backend/src/middleware/dpdpMiddleware.js purpose tag validation"
+  },
+  {
+    "id": "DC-07a",
+    "fixes": "D-07a",
+    "act_section": "S6(7)-S6(9)",
+    "rule_reference": "Rule 5",
+    "title": "Standard Consent Manager integration interface",
+    "description": "Documented and mocked API interface allowing registered Consent Managers to query and update user consent state.",
+    "evidence_type": "code, document",
+    "verification": "backend/src/routes/privacyRoutes.js /api/privacy/consent-manager endpoints"
+  },
+  {
+    "id": "DC-08",
+    "fixes": "D-08",
+    "act_section": "S8(5)",
+    "rule_reference": "Rule 6(1)",
+    "title": "Reasonable security safeguards against breach",
+    "description": "Full suite of OWASP A01-A10 and additional technical controls mapped to DPDP reasonable security safeguards.",
+    "evidence_type": "code, config",
+    "verification": "groundtruth/controls.json all controls mapped with dpdp_relevant: true"
+  },
+  {
+    "id": "DC-09",
+    "fixes": "D-09",
+    "act_section": "S8(6)",
+    "rule_reference": "Rule 7",
+    "title": "Breach notification protocol and incident runbook",
+    "description": "Incident response runbook and automated templates for intimation to Data Protection Board of India and affected users within required timeframe.",
+    "evidence_type": "document, code",
+    "verification": "privacy/breach_runbook.md and POST /api/admin/simulate-breach-notification"
+  },
+  {
+    "id": "DC-10",
+    "fixes": "D-10",
+    "act_section": "S8(7)",
+    "rule_reference": "Rule 8",
+    "title": "Automated data retention schedule and purge job",
+    "description": "Retention limits defined per category; automated cron/worker purges expired sessions, temp uploads, and old inactive records.",
+    "evidence_type": "document, code",
+    "verification": "privacy/retention_schedule.json and backend/src/services/dpdpService.js purgeExpiredData"
+  },
+  {
+    "id": "DC-11",
+    "fixes": "D-11",
+    "act_section": "S8(3)",
+    "rule_reference": "Rule 6(2)",
+    "title": "Data accuracy and self-service correction flow",
+    "description": "Input validation ensures data quality; authenticated self-service profile update enables immediate corrections.",
+    "evidence_type": "UI, code",
+    "verification": "PUT /api/profile endpoint test"
+  },
+  {
+    "id": "DC-12",
+    "fixes": "D-12",
+    "act_section": "S8(1), S8(2)",
+    "rule_reference": "Rule 6(4)",
+    "title": "Data processor register and minimised sharing",
+    "description": "Register of all third-party processors (payment, logistics, SMS) with DPA reference, purpose, and minimised shared fields.",
+    "evidence_type": "document",
+    "verification": "privacy/processor_register.json"
+  },
+  {
+    "id": "DC-13",
+    "fixes": "D-13",
+    "act_section": "S8(9)",
+    "rule_reference": "Rule 3(1)(c)",
+    "title": "Prominently published DPO and business contact info",
+    "description": "Data Protection Officer / Grievance Officer contact details displayed in privacy notice, footer, and privacy policy.",
+    "evidence_type": "UI, document",
+    "verification": "GET /api/privacy/dpo-contact and frontend footer"
+  },
+  {
+    "id": "DC-14",
+    "fixes": "D-14",
+    "act_section": "S8(10)",
+    "rule_reference": "Rule 9",
+    "title": "In-app grievance redressal mechanism with Board escalation path",
+    "description": "Ticketed grievance filing, automated acknowledgement, 72-hour SLA tracker, and transparent escalation link to the DPBI.",
+    "evidence_type": "UI, code",
+    "verification": "POST /api/privacy/grievances and GET /api/privacy/grievances/:ticketId"
+  },
+  {
+    "id": "DC-15",
+    "fixes": "D-15",
+    "act_section": "S11",
+    "rule_reference": "Rule 10",
+    "title": "Right to Access: comprehensive 'Download My Data' export",
+    "description": "Machine-readable JSON export of user profile, orders, locations, consent history, support tickets, and list of processors shared with.",
+    "evidence_type": "code, test",
+    "verification": "GET /api/privacy/download-my-data endpoint test"
+  },
+  {
+    "id": "DC-16",
+    "fixes": "D-16",
+    "act_section": "S12",
+    "rule_reference": "Rule 11",
+    "title": "Right to Erasure: true cryptographic erasure across tables and caches",
+    "description": "Irreversible anonymization/deletion of personal data while preserving only statutory tax/order invoice summaries with personal data expunged.",
+    "evidence_type": "code, test",
+    "verification": "POST /api/privacy/request-erasure and database inspection"
+  },
+  {
+    "id": "DC-17",
+    "fixes": "D-17",
+    "act_section": "S12",
+    "rule_reference": "Rule 11(1)",
+    "title": "Right to Correction and updating of inaccurate data",
+    "description": "Self-service updating of personal info with audit logging of previous vs updated state.",
+    "evidence_type": "UI, code",
+    "verification": "PUT /api/profile and audit_logs entry check"
+  },
+  {
+    "id": "DC-18",
+    "fixes": "D-18",
+    "act_section": "S14",
+    "rule_reference": "Rule 12",
+    "title": "Right of Nomination: designate representative",
+    "description": "Allows data principals to nominate an individual to exercise their rights in event of death or incapacity.",
+    "evidence_type": "UI, code",
+    "verification": "POST /api/privacy/nominee and GET /api/privacy/nominee"
+  },
+  {
+    "id": "DC-19",
+    "fixes": "D-19",
+    "act_section": "S9(1)",
+    "rule_reference": "Rule 13(1)",
+    "title": "Children's data: age gating and verifiable parental consent",
+    "description": "Users under 18 years flagged as minors; processing gated behind verifiable parental consent flow with parent verification token.",
+    "evidence_type": "UI, code",
+    "verification": "POST /api/auth/register-minor and POST /api/auth/verify-parental-consent"
+  },
+  {
+    "id": "DC-20",
+    "fixes": "D-20",
+    "act_section": "S9(3)",
+    "rule_reference": "Rule 13(3)",
+    "title": "Prohibition of tracking, profiling, and targeted ads for minors",
+    "description": "Server-side and client-side hard lockout of analytics, telemetry, and promotional targeting for minor accounts.",
+    "evidence_type": "code, test",
+    "verification": "backend/src/middleware/dpdpMiddleware.js minor advertising lockout"
+  },
+  {
+    "id": "DC-21",
+    "fixes": "D-21",
+    "act_section": "S16",
+    "rule_reference": "Rule 14",
+    "title": "Cross-border transfer restrictions: Indian territory processing",
+    "description": "Primary data stored and processed in India-based endpoints; transfer allowlist strictly verified against notified countries.",
+    "evidence_type": "config, document",
+    "verification": "privacy/data_inventory_ropa.json storage region metadata"
+  },
+  {
+    "id": "DC-22",
+    "fixes": "D-22",
+    "act_section": "S10",
+    "rule_reference": "Rule 15",
+    "title": "Significant Data Fiduciary (SDF) governance readiness",
+    "description": "Config toggle and artefacts for SDF requirements: appointed DPO, independent data auditor, DPIA summary, algorithmic transparency.",
+    "evidence_type": "document, config",
+    "verification": "privacy/dpia_summary.md and GET /api/privacy/sdf-status"
+  },
+  {
+    "id": "DC-23",
+    "fixes": "D-23",
+    "act_section": "S8(1), S9",
+    "rule_reference": "Rule 6",
+    "title": "Zero personal data in URLs, query strings, and telemetry payloads",
+    "description": "Guaranteed absence of emails, phone numbers, or tokens in query parameters, error reports, and client URLs.",
+    "evidence_type": "code, test",
+    "verification": "Automated route and query inspection test"
+  },
+  {
+    "id": "DC-24",
+    "fixes": "D-24",
+    "act_section": "S8(4)",
+    "rule_reference": "Rule 6(3)",
+    "title": "Comprehensive Record of Processing Activities (RoPA)",
+    "description": "Live maintained inventory documenting data fields, legal grounds, storage locations, retention schedules, and security measures.",
+    "evidence_type": "document",
+    "verification": "privacy/data_inventory_ropa.json"
+  }
+]

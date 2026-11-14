@@ -1,0 +1,34 @@
+{
+  "processors": [
+    {
+      "processor_id": "PROC-01",
+      "name": "BharatPay Payment Solutions Ltd (Mock)",
+      "service": "Payment Gateway & UPI Settlement",
+      "jurisdiction": "Mumbai, India",
+      "dpa_executed": true,
+      "dpa_reference": "DPA-2026-BP-001",
+      "minimised_fields_shared": ["Order ID", "Amount INR", "Customer Phone (Tokenized)"],
+      "security_standard": "PCI-DSS Level 1 & DPDP Section 8(1) compliant"
+    },
+    {
+      "processor_id": "PROC-02",
+      "name": "KiranaExpress Logistics Fleet Pvt Ltd (Mock)",
+      "service": "Hyperlocal 10-Minute Delivery Fleet",
+      "jurisdiction": "Bengaluru, India",
+      "dpa_executed": true,
+      "dpa_reference": "DPA-2026-KE-004",
+      "minimised_fields_shared": ["Delivery Address Line", "Customer First Name", "Masked Contact Number"],
+      "security_standard": "Encrypted mobile rider terminal, zero persistent storage"
+    },
+    {
+      "processor_id": "PROC-03",
+      "name": "Sandesh Communications Private Limited (Mock)",
+      "service": "Transactional OTP and Order Status SMS",
+      "jurisdiction": "New Delhi, India",
+      "dpa_executed": true,
+      "dpa_reference": "DPA-2026-SC-012",
+      "minimised_fields_shared": ["Phone Number", "Template OTP / Order Token"],
+      "security_standard": "TRAI DLT registered entity, automated log purge after 72h"
+    }
+  ]
+}

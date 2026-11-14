@@ -1,0 +1,52 @@
+{
+  "ropa_version": "1.0",
+  "data_fiduciary": "KiranaKart Technologies Private Limited",
+  "dpo": "Smt. Priyanka Sharma (dpo@kiranakart.local)",
+  "jurisdiction": "India (DPDP Act, 2023)",
+  "processing_activities": [
+    {
+      "activity_id": "PA-01",
+      "activity_name": "Customer User Registration and Authentication",
+      "data_categories": ["Name", "Email Address", "Phone Number", "Password Hash (Argon2id)", "Encrypted Date of Birth"],
+      "data_principals": ["Customers", "Store Owners"],
+      "purposes": ["Authentication", "Account security", "Age-gate verification"],
+      "lawful_ground": "Consent (Section 6) and Parental Consent (Section 9)",
+      "storage_location": "PostgreSQL / SQLite Database (India-Region / Localhost)",
+      "retention": "Duration of active account + 30 days",
+      "security_measures": ["AES-256-GCM field encryption", "Bcrypt/Argon2id password hashing", "Timing-safe comparisons"]
+    },
+    {
+      "activity_id": "PA-02",
+      "activity_name": "Grocery Order Processing and Delivery Fulfillment",
+      "data_categories": ["Delivery Address", "Geolocation", "Ordered SKUs", "Invoice Amount", "Encrypted Payment Token"],
+      "data_principals": ["Customers", "Delivery Riders"],
+      "purposes": ["Physical item delivery", "Store inventory adjustment", "Customer invoicing"],
+      "lawful_ground": "Contractual Necessity / Consented Purpose (Section 4 & 6)",
+      "storage_location": "Encrypted Database & Protected Object Storage (India)",
+      "retention": "8 years for tax records; delivery coordinates purged after 30 days",
+      "security_measures": ["IDOR check on order lookup", "Server-side price verification", "Non-root container isolation"]
+    },
+    {
+      "activity_id": "PA-03",
+      "activity_name": "Consent Audit Ledger Maintenance",
+      "data_categories": ["User ID", "Purpose Tag", "Notice Version", "Consent Timestamp", "Hashed Client IP"],
+      "data_principals": ["All Registered Data Principals"],
+      "purposes": ["Demonstrating legal consent compliance under DPDP Section 6"],
+      "lawful_ground": "Statutory Obligation (DPDP Act 2023 Section 6(1)-(4))",
+      "storage_location": "Append-only consent ledger table",
+      "retention": "5 years after consent withdrawal",
+      "security_measures": ["Tamper-evident logs", "Immutable append-only inserts"]
+    },
+    {
+      "activity_id": "PA-04",
+      "activity_name": "Customer Grievance Redressal and Nomination",
+      "data_categories": ["Ticket ID", "Issue Description", "Nominee Name", "Nominee Relationship", "Nominee Phone"],
+      "data_principals": ["Complainants", "Designated Nominees"],
+      "purposes": ["Resolving customer disputes", "Exercising rights under Section 13 & 14"],
+      "lawful_ground": "Legal Obligation (Section 8(10) & Section 14)",
+      "storage_location": "Internal Grievance DB (India)",
+      "retention": "3 years post dispute resolution",
+      "security_measures": ["Access restricted to authorized Grievance Officers", "Full audit logging"]
+    }
+  ]
+}

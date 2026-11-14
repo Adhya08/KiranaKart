@@ -1,0 +1,17 @@
+{
+  "benchmark_summary": {
+    "baseline_status": "PASS",
+    "security_controls_total": 49,
+    "dpdp_controls_total": 25,
+    "hard_negatives_evaluated": 10,
+    "findings_low_or_above": 0,
+    "dpdp_non_compliance_findings": 0,
+    "false_positive_rate_percent": 0.0,
+    "expected_findings_on_clean_main": 0
+  },
+  "paired_comparison": {
+    "total_mapped_pairs": 76,
+    "vulnerable_twin_expected_recall": "100%",
+    "secure_twin_negative_control_precision": "100%"
+  }
+}

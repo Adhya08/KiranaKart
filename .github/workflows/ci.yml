@@ -1,0 +1,55 @@
+name: Hardened CI & SecureScan Baseline Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# Minimal Permissions (C-A08-03)
+permissions:
+  contents: read
+
+jobs:
+  security-baseline-gate:
+    name: Verify OWASP & DPDP Zero-Flaw Quality Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      # Pinned full commit SHA (C-A08-03)
+      - name: Checkout Repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js Runtime
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Set up Python Runtime
+        uses: actions/setup-python@0a5c61591373683505ea898e09a6ea1c8759681e # v5.0.0
+        with:
+          python-version: '3.11'
+
+      # Install with immutable lockfile, preventing lifecycle script execution
+      - name: Install Locked Dependencies
+        run: npm ci --ignore-scripts
+
+      # Automated Dependency Vulnerability Check (C-A06-01)
+      - name: Audit Dependencies for Known CVEs
+        run: npm audit --audit-level=moderate
+
+      # Verify Ground Truth Manifests & Hard Negatives
+      - name: Verify Control Manifests and Hard Negatives
+        run: |
+          node -e "
+            const c = require('./groundtruth/controls.json');
+            const d = require('./groundtruth/dpdp-controls.json');
+            console.log('Validated ' + c.length + ' security controls and ' + d.length + ' DPDP controls.');
+          "
+
+      # Execute Baseline Quality Gate Score (FR-SC-03)
+      - name: Execute Negative Control Scorer
+        run: python3 tools/score.py

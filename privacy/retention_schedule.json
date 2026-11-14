@@ -1,0 +1,39 @@
+{
+  "retention_schedule": [
+    {
+      "category": "Customer Account Profile",
+      "fields": ["name", "email", "phone", "encrypted_dob"],
+      "retention_period": "Active duration of account + 30 days post voluntary closure",
+      "statutory_basis": "DPDP Act 2023 S8(7)",
+      "disposal_method": "Irreversible cryptographic erasure and record deletion"
+    },
+    {
+      "category": "Order & Tax Invoices",
+      "fields": ["order_id", "items", "subtotal", "gst_amount", "tokenized_payment_ref"],
+      "retention_period": "8 years from completion of financial year",
+      "statutory_basis": "GST Act & Income Tax Act Section 44AA (Statutory Override)",
+      "disposal_method": "Anonymize customer PII; preserve ledger totals for tax audit"
+    },
+    {
+      "category": "Consent Ledger Records",
+      "fields": ["user_id", "purpose", "timestamp", "channel", "ip_hash", "status"],
+      "retention_period": "5 years following account closure or consent withdrawal",
+      "statutory_basis": "DPDP Act 2023 S6(4) evidentiary compliance",
+      "disposal_method": "Archive in cold tamper-evident audit store"
+    },
+    {
+      "category": "Grievance Tickets & Redressal Records",
+      "fields": ["ticket_id", "complainant_name", "category", "resolution_notes"],
+      "retention_period": "3 years from closure of grievance",
+      "statutory_basis": "DPDP Act 2023 S8(10)",
+      "disposal_method": "Secure automated purge"
+    },
+    {
+      "category": "Session Identifiers & Ephemeral Cache",
+      "fields": ["jwt_token_jti", "refresh_token", "rate_limit_counters"],
+      "retention_period": "24 hours to 7 days maximum",
+      "statutory_basis": "DPDP Reasonable Security Safeguards S8(5)",
+      "disposal_method": "Automated TTL cache expiry"
+    }
+  ]
+}
